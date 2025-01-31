@@ -1,0 +1,24 @@
+@import '../../../index.scss';
+
+.p-success {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 600px;
+
+  div {
+    margin-top: 10px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $purple-color;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    &:hover {
+      background-color: darken($purple-color, 10%);
+    }
+  }
+}

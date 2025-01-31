@@ -1,0 +1,24 @@
+@import '../../../index.scss';
+
+.watching-header {
+  min-width: fit-content;
+  height: 50px;
+  display: flex;
+  color: #fff;
+  background-color: $dark-color;
+  padding: 8px 16px;
+  align-items: center;
+
+  &-s1 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    h2 {
+      letter-spacing: 1.2px;
+    }
+    margin-right: 10px;
+  }
+
+  &-s2 {
+  }
+}

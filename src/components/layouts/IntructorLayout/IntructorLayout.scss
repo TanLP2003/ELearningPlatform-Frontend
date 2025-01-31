@@ -1,0 +1,10 @@
+.instructor {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 100vh;
+  &-body {
+    margin-left: 60px;
+    min-height: 100vh;
+  }
+}

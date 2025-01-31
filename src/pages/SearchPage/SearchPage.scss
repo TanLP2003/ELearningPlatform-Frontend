@@ -1,0 +1,47 @@
+@import '../../index.scss';
+
+.search-page {
+  margin: 0 90px;
+  padding: 24px 48px;
+}
+$level-color: #f3ca8c;
+
+.search-page-list {
+  margin-top: 30px;
+}
+
+.search-page-item {
+  height: 180px;
+  display: flex;
+  gap: 20px;
+  padding-bottom: 20px;
+  border-bottom: 0.8px solid #ccc;
+  cursor: pointer;
+
+  &-image {
+    width: 250px;
+  }
+  &-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &-level {
+    margin-top: auto;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    &-beginner {
+      background-color: $level-color;
+    }
+    &-middle {
+      background-color: darken($level-color, 10%);
+    }
+    &-advanced {
+      background-color: darken($level-color, 20%);
+    }
+  }
+}

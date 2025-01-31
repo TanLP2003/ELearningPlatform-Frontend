@@ -1,0 +1,30 @@
+.mycourse {
+  margin-bottom: 90px;
+  &-header {
+    background-color: #2d2f31;
+    color: #fff;
+    padding: 48px 280px 0 280px;
+  }
+  &-nav {
+    margin-top: 24px;
+    display: flex;
+    gap: 20px;
+    &-link {
+      padding: 8px 4px;
+      color: rgba(255, 255, 255, 0.8);
+      cursor: pointer;
+      &:hover {
+        color: #fff;
+      }
+    }
+    &-active {
+      color: #fff;
+      border-bottom: 4px solid #fff;
+      font-weight: bold;
+    }
+  }
+
+  &-body {
+    margin: 30px 280px;
+  }
+}

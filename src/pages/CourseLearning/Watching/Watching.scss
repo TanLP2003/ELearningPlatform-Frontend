@@ -1,0 +1,30 @@
+.watching {
+}
+
+.course-content {
+  padding: 0 16px;
+}
+
+.wt {
+  display: flex;
+  gap: 16px;
+  border-bottom: 1px solid #ccc;
+  &-item {
+    display: flex;
+    justify-content: center;
+    padding: 10px 5px;
+    color: #6a6f73;
+    font-style: bold;
+    font-size: 1.2rem;
+    align-items: center;
+    cursor: pointer;
+    &:hover {
+      color: black;
+    }
+    &-active {
+      color: black;
+      border-bottom: 1px solid black;
+      font-weight: bold;
+    }
+  }
+}

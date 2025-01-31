@@ -1,0 +1,58 @@
+@import '../../index.scss';
+
+.cm {
+  padding: 0 24px 0 48px;
+  &-body {
+  }
+  &-title {
+    margin-bottom: 20px;
+  }
+  &-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    &-search {
+      display: flex;
+      align-items: center;
+
+      &-input {
+        border: 1px solid #ccc;
+        padding: 10px;
+      }
+      &-icon {
+        background-color: #000;
+        padding: 10px;
+      }
+    }
+    &-new {
+      color: #fff;
+      background-color: $purple-color;
+      font-weight: bold;
+      padding: 10px;
+      cursor: pointer;
+      &:hover {
+        background-color: darken($purple-color, 10%);
+      }
+    }
+  }
+
+  &-list {
+    &-item {
+      margin-top: 20px;
+      display: flex;
+      border: 1px solid #ccc;
+      cursor: pointer;
+      img {
+        width: 120px;
+        height: 120px;
+      }
+      &-content {
+        padding: 10px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    }
+  }
+}

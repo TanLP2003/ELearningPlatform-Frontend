@@ -1,0 +1,12 @@
+@import '../../../../index.scss';
+
+.topbar {
+  padding: 0 24px;
+  display: flex;
+  flex-direction: row-reverse;
+  height: 72px;
+  &-link {
+    margin: 12px 0;
+    padding: 0 12px;
+  }
+}

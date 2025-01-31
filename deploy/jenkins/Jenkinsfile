@@ -1,0 +1,38 @@
+pipeline {
+    agent any
+    environment {
+        DOCKERHUB_CREDENTIALS=credentials('dockerhub')
+    }
+
+    stages {
+        stage("Build image"){
+            steps {
+                sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+                sh 'docker build -t tanlp/elp-frontend .'
+            }
+        }
+        stage("Push image to registry") {
+          steps {
+            sh 'docker push tanlp/elp-frontend'
+          }
+        }
+        stage("Deploy to Minikube"){
+          steps {
+            sh 'kubectl apply -f deploy/k8s/deploy.yml'
+            script {
+              try {
+                sh 'kubectl rollout restart deployment -l tier=backend'
+              }catch(err){
+                echo 'Deployment just created, no need to restart'
+              }
+            }            
+          }
+        }
+    }
+
+    post {
+      always {
+        sh 'docker logout'
+      }
+    }
+}

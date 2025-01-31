@@ -1,0 +1,141 @@
+@import '../../../index.scss';
+
+.course-viewing-intro {
+  position: relative;
+  height: 300px;
+  background-color: $dark-color;
+  color: #fff;
+  padding: 32px 0;
+
+  &-wrapper {
+    margin: 0 160px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &-category {
+    color: $light-blue;
+  }
+  &-name {
+    max-width: 500px;
+    overflow-wrap: break-word;
+  }
+  &-description {
+    font-size: 1.1rem;
+    max-width: 700px;
+  }
+  &-author {
+    span {
+      color: $light-blue;
+      text-decoration: underline;
+    }
+  }
+  &-language {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+.course-viewing-sidebar {
+  position: absolute;
+  width: 400px;
+  top: 32px;
+  right: 100px;
+  z-index: 2;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  &-image {
+    height: 200px;
+    width: 100%;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &-body {
+    padding: 24px;
+    background-color: #fff;
+    color: #000;
+  }
+  &-not-buyed {
+    div {
+      p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 0.8px solid #000;
+      }
+    }
+  }
+  &-buyed {
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $dark-color;
+      font-weight: bold;
+      color: #fff;
+      padding: 10px 12px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      &:hover {
+        background-color: darken($dark-color, 10%);
+      }
+    }
+    p {
+      display: flex;
+      align-items: center;
+      word-wrap: break-word;
+      gap: 10px;
+      span {
+        text-align: center;
+      }
+      b {
+        font-size: 1.2rem;
+      }
+      margin-bottom: 10px;
+    }
+  }
+  &-group-btn {
+    display: flex;
+    gap: 20px;
+  }
+  &-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    border: 1px solid #000;
+    cursor: pointer;
+    margin-bottom: 10px;
+    &:hover {
+      background-color: darken(#fff, 10%);
+    }
+  }
+  &-add-basket {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    flex: 1;
+    background-color: $purple-color;
+    color: #fff;
+    margin-bottom: 10px;
+    cursor: pointer;
+    &:hover {
+      background-color: darken($purple-color, 10%);
+    }
+  }
+}
+
+.course-viewing-sidebar-common {
+  margin-top: 10px;
+  p {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+}

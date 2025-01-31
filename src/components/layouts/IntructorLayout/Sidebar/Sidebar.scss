@@ -1,0 +1,31 @@
+@import '../../../../index.scss';
+
+.sidebar {
+  position: fixed;
+  z-index: 2;
+  background-color: #2d2f31;
+  color: #fff;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 56px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  li {
+    padding: 16px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    &:hover {
+      border-left: 3px solid $purple-color;
+    }
+  }
+  &-logo {
+    color: $purple-color;
+  }
+}
+
+.sidebar-icon-active {
+  border-left: 3px solid $purple-color;
+}

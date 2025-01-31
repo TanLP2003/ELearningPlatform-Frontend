@@ -1,0 +1,66 @@
+.fullname-headline {
+  height: 150px;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  padding: 32px 300px;
+  h1 {
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  h3 {
+    margin-top: 10px;
+  }
+}
+
+.avatar-description {
+  height: 250px;
+  padding: 32px 330px;
+  display: flex;
+
+  .avatar {
+    div {
+      width: 250px;
+    }
+
+    &-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+      cursor: pointer;
+      div {
+        color: white;
+        background-color: black;
+        width: fit-content;
+        padding: 16px;
+        border-radius: 50%;
+        height: 128px;
+        width: 128px;
+        text-align: center;
+        font-size: 64px;
+      }
+    }
+
+    .routes {
+      margin-top: 10px;
+      padding: 0 4px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      div {
+        text-align: center;
+        cursor: pointer;
+        width: fit-content;
+      }
+    }
+  }
+  .description {
+    padding: 10px 0;
+    p {
+      max-width: 700px;
+      word-wrap: break-word;
+    }
+  }
+}

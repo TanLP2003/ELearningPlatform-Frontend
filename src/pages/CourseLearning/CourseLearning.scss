@@ -1,0 +1,28 @@
+@import '../../index.scss';
+
+.learning-header {
+  color: #fff;
+  background-color: $dark-color;
+  padding: 8px 16px;
+  display: flex;
+  justify-content: space-between;
+  &-s1 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    h2 {
+      letter-spacing: 1.2px;
+    }
+  }
+}
+
+.learning-body {
+  display: flex;
+  &-left {
+    flex: 7;
+  }
+  &-right {
+    flex: 3;
+    position: sticky;
+  }
+}

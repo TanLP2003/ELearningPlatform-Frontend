@@ -1,0 +1,56 @@
+@import '../../../index.scss';
+
+.content-nav {
+  // position: static;
+  border-left: 0.5px solid #ccc;
+  min-height: 100vh;
+  &-header {
+    padding: 8px 8px 8px 16px;
+    border-bottom: 0.8px solid #ccc;
+  }
+}
+
+.content-nav-list {
+  overflow-y: auto;
+  &-wrapper {
+    height: fit-content;
+    width: 100%;
+  }
+}
+
+.content-nav-item {
+  padding: 16px;
+  cursor: pointer;
+  &-wrapper {
+    border-bottom: 0.8px solid #ccc;
+  }
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+}
+
+.section-dropdown-list {
+  // margin-top: 10px;
+}
+
+.section-dropdown-item {
+  &-wrapper {
+    cursor: pointer;
+    &:hover {
+      background-color: $dark-grey;
+    }
+  }
+  display: flex;
+  gap: 20px;
+  padding: 16px;
+  div {
+    p {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+  }
+}

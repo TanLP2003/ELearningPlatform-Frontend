@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: elp-frontend
+  labels:
+    tier: frontend
+spec:
+  selector:
+    matchLabels:
+      app: elp-frontend
+  template:
+    metadata:
+      labels:
+        app: elp-frontend
+    spec:
+      containers:
+        - name: elp-frontend
+          image: tanlp/elp-frontend
+          ports:
+            - containerPort: 80
+          env:
+            - name: VITE_SERVER_URL
+              value: 'http://192.168.49.2:30000' # apigateway uri
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: elp-frontend
+spec:
+  type: NodePort
+  selector:
+    app: elp-frontend
+  ports:
+    - port: 80
+      targetPort: 80
+      nodePort: 31000

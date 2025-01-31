@@ -1,0 +1,305 @@
+@import '../../../index.scss';
+
+.cs {
+  &-header {
+    padding: 24px 48px;
+    border-bottom: 1px solid #ccc;
+  }
+  &-body {
+    padding: 48px;
+  }
+}
+.add-btn {
+  display: flex;
+  align-items: center;
+  // gap: 10px;
+  border: 1px solid $dark-color;
+  width: fit-content;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-weight: bold;
+  &:hover {
+    background-color: #ccc;
+  }
+}
+.create-section {
+  border: 1px solid $dark-color;
+  padding: 5px;
+  &-body {
+    display: flex;
+    align-items: center;
+    input {
+      margin-left: 10px;
+      flex-grow: 1;
+      padding: 10px 10px;
+      border: 1px solid #000;
+    }
+  }
+  &-btn {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    span,
+    button {
+      padding: 10px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    &-add {
+      background-color: $dark-color;
+      color: #fff;
+    }
+  }
+}
+
+.cs-section {
+  padding: 5px;
+  border: 1px solid $dark-color;
+  margin-bottom: 20px;
+  &-name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+  }
+  &-lecture-list {
+    margin-top: 30px;
+    padding: 0 8px 0 60px;
+  }
+}
+
+.create-lecture {
+  border: 1px solid $dark-color;
+  padding: 5px;
+  &-body {
+    display: flex;
+    align-items: center;
+    input {
+      margin-left: 10px;
+      flex-grow: 1;
+      padding: 10px 10px;
+      border: 1px solid #000;
+    }
+  }
+  &-btn {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    span,
+    button {
+      padding: 10px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    &-add {
+      background-color: $dark-color;
+      color: #fff;
+    }
+  }
+}
+
+.cs-lecture {
+  padding: 11px 8px;
+  border: 1px solid #000;
+  &-wrapper {
+    margin-bottom: 10px;
+  }
+  &-body {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    p {
+      flex-grow: 1;
+    }
+  }
+}
+
+.cs-lecture-dropdown {
+  padding: 8px;
+  border-left: 1px solid #000;
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+}
+
+.cs-lecture-description {
+  textarea {
+    // font-family: ;
+    padding: 13px 16px;
+    border: 1px solid #000;
+    width: 100%;
+    margin: 10px 0;
+  }
+  &-container {
+    cursor: pointer;
+    &:hover {
+      border: 1px solid $dark-color;
+    }
+  }
+}
+
+.cs-group-btn {
+  display: flex;
+  flex-direction: row-reverse;
+  span,
+  button {
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  &-add {
+    background-color: $dark-color;
+    color: #fff;
+  }
+}
+
+.cs-lecture-add-content {
+  padding: 8px;
+  border-left: 1px solid #000;
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+  position: relative;
+  &-video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -30px;
+    right: 50px;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    border-top: 1px solid #000;
+    background-color: #fff;
+    padding: 2px 8px;
+    z-index: 4;
+    svg {
+      cursor: pointer;
+    }
+  }
+
+  .disabled-add-content {
+    pointer-events: none;
+    opacity: 0.9;
+  }
+
+  &-tab {
+    display: flex;
+    align-items: center;
+    // border-bottom: 2px solid #ccc;
+    &-item {
+      padding: 8px 4px;
+      color: lighten($dark-color, 30%);
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+}
+.disabled-add-content {
+  pointer-events: none;
+  opacity: 0.9;
+}
+.tab-active {
+  border-bottom: 2px solid #333;
+  color: #000;
+}
+
+.video-upload {
+  display: flex;
+  margin-top: 20px;
+  // border: 1px solid #000;
+  &-left {
+    flex-grow: 1;
+    padding: 16px;
+    border-left: 1px solid #000;
+    border-top: 1px solid #000;
+    border-bottom: 0.8px solid #000;
+  }
+  &-right {
+    font-weight: bold;
+    padding: 16px;
+    border: 0.8px solid #000;
+    cursor: pointer;
+    &:hover {
+      background-color: #ccc;
+    }
+  }
+  table {
+    width: 100%;
+    th {
+      text-align: left;
+    }
+  }
+}
+
+.video-library {
+  // display: flex;
+  margin-top: 20px;
+  &-search {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    align-items: center;
+    input {
+      padding: 5px 10px;
+      border: 1px solid #000;
+    }
+    svg {
+      height: 100%;
+      font-size: 25px;
+      // margin-left: 5px;
+      border-top: 1px solid #000;
+      border-right: 1px solid #000;
+      border-bottom: 1px solid #000;
+    }
+  }
+  table {
+    margin-top: 10px;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+.cs-lecture-video-display {
+  &-container {
+    border-bottom: 0.8px solid #ccc;
+    margin-bottom: 10px;
+    display: flex;
+    gap: 20px;
+  }
+  &-thumbnail {
+    height: 100px;
+    width: 100px;
+  }
+  &-info {
+    display: flex;
+    justify-content: space-between;
+  }
+  &-preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: bold;
+    background-color: $dark-color;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  &-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    & > span {
+      text-align: center;
+      color: $purple-color;
+      cursor: pointer;
+      &:hover {
+        color: $dark-color;
+      }
+      svg {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+      }
+    }
+  }
+}

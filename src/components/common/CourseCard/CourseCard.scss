@@ -1,0 +1,28 @@
+@import '../../../index.scss';
+
+.course-card {
+  width: 250px;
+  // background-color: lighten($light-blue, 20%);
+  p {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 3em;
+    height: 3em;
+    line-height: 1.5em;
+  }
+  img {
+    transition: all 0.3s ease;
+  }
+  cursor: pointer;
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
+  }
+}
